@@ -1,4 +1,4 @@
-# Pooja & Shiva · Wedding Invitation Platform
+# venu & vidya · Wedding Invitation Platform
 
 A premium, animated digital wedding invitation built with **Flutter Web** + **Dart Frog**.
 Designed to feel like a luxury product — soft pastel palette, gold accents, glassmorphism cards,

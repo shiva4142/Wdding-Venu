@@ -17,10 +17,10 @@ services:
       - key: COUPLE_BRIDE
         value: Pooja
       - key: COUPLE_GROOM
-        value: Shiva
+        value: Venu gopal
       - key: SITE_URL
         sync: false        # set to your Firebase Hosting URL after step 2
-      # Optional Firestore (set in dashboard if you enable it):
+      # Optional Firestore   (set in dashboard if you enable it):
       # - key: FIREBASE_PROJECT_ID
       #   sync: false
       # - key: FIREBASE_API_KEY

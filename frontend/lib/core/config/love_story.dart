@@ -24,17 +24,17 @@ const familyEntries = <FamilyEntry>[
   FamilyEntry(
     badge: "Groom's Side",
     emoji: '🤵',
-    title: 'Shiva',
-    text: 'S/o Sri Krishna & Smt. Varalakshmi\nKodumur, Kurnool',
+    title: 'Venu gopal',
+    text: 'S/o Sri Shankarayya & Smt. Shankaramma\nDhone, Andhra Pradesh',
   ),
   FamilyEntry(
     badge: "Bride's Side",
     emoji: '👰',
-    title: 'Pooja',
-    text: 'D/o Sri Shyamoorthi & Smt. Saraswathi',
+    title: 'Vidya',
+    text: 'D/o Sri Eshwarayya & Smt. Madavi',
   ),
   FamilyEntry(
-    badge: 'Engaged  •  06 Apr 2026',
+    badge: 'Engaged  •  25 March 2026',
     emoji: '💍',
     title: 'The Promise Was Sealed',
     text:
@@ -69,8 +69,8 @@ const familyEntries = <FamilyEntry>[
 /// `frontend/assets/images/gallery/`. Add or remove entries here if you
 /// want more or fewer tiles — the grid adapts automatically.
 const galleryImages = <String>[
-  'assets/images/gallery/Shiva.jpeg',
-  'assets/images/gallery/Pooja.jpeg',
-  'assets/images/gallery/Pradya.jpeg',
-  'assets/images/gallery/Brother.png',
+  'assets/images/gallery/VenuVidya1.jpg',
+  'assets/images/gallery/VenuVidya2.jpg',
+  'assets/images/gallery/Sis1.jpg',
+  'assets/images/gallery/Sis2.jpg',
 ];
