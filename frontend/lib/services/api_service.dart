@@ -21,6 +21,8 @@ class ApiService {
   ApiService({String? baseUrl}) : baseUrl = baseUrl ?? WeddingConfig.apiBase;
   final String baseUrl;
 
+  static const _httpTimeout = Duration(seconds: 25);
+
   String? _token;
   Future<void> setToken(String? token) async {
     _token = token;
@@ -76,14 +78,14 @@ class ApiService {
   }
 
   Future<int> attendingCount() async {
-    final r = await http.get(_u('/stats'));
+    final r = await http.get(_u('/stats')).timeout(_httpTimeout);
     if (r.statusCode >= 300) return 0;
     final body = jsonDecode(r.body) as Map<String, dynamic>;
     return (body['attendingCount'] as num?)?.toInt() ?? 0;
   }
 
   Future<List<Wish>> listWishes() async {
-    final r = await http.get(_u('/wishes'));
+    final r = await http.get(_u('/wishes')).timeout(_httpTimeout);
     if (r.statusCode >= 300) throw ApiException(_extractError(r));
     final body = jsonDecode(r.body) as Map<String, dynamic>;
     final list = (body['wishes'] as List?) ?? [];
@@ -93,11 +95,13 @@ class ApiService {
   }
 
   Future<Wish> sendWish(String name, String message) async {
-    final r = await http.post(
+    final r = await http
+        .post(
       _u('/wishes'),
       headers: _headers,
       body: jsonEncode({'name': name, 'message': message}),
-    );
+    )
+        .timeout(_httpTimeout);
     if (r.statusCode >= 300) throw ApiException(_extractError(r));
     final body = jsonDecode(r.body) as Map<String, dynamic>;
     return Wish.fromJson(body['wish'] as Map<String, dynamic>);

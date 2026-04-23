@@ -122,7 +122,20 @@ class _WishesSectionState extends ConsumerState<WishesSection> {
                   padding: EdgeInsets.all(40),
                   child: CircularProgressIndicator(color: AppPalette.rose),
                 ),
-                error: (_, __) => const Text("Couldn't load wishes."),
+                error: (e, _) => Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 24),
+                  child: Text(
+                    "Couldn't load wishes.\n\n"
+                    'Check that the site was built with the correct API URL '
+                    '(flutter build web --dart-define=API_BASE=...).\n\n'
+                    'Details: $e',
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                      color: Theme.of(context).textTheme.bodyMedium?.color?.withOpacity(.85),
+                      height: 1.35,
+                    ),
+                  ),
+                ),
                 data: (list) {
                   if (list.isEmpty) {
                     return Padding(

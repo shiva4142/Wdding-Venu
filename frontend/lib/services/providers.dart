@@ -16,7 +16,9 @@ final attendingCountProvider = StreamProvider<int>((ref) {
     try {
       final c = await api.attendingCount();
       if (!controller.isClosed) controller.add(c);
-    } catch (_) {}
+    } catch (e, st) {
+      if (!controller.isClosed) controller.addError(e, st);
+    }
   }
 
   controller = StreamController<int>(
@@ -41,7 +43,9 @@ final wishesProvider = StreamProvider<List<Wish>>((ref) {
     try {
       final list = await api.listWishes();
       if (!controller.isClosed) controller.add(list);
-    } catch (_) {}
+    } catch (e, st) {
+      if (!controller.isClosed) controller.addError(e, st);
+    }
   }
 
   controller = StreamController<List<Wish>>(
