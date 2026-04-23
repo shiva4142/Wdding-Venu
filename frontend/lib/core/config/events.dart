@@ -41,7 +41,7 @@ final weddingEvents = <WeddingEvent>[
     id: 'reception',
     title: 'Reception',
     emoji: '🎉',
-    date: DateTime(2026, 5, 6, 19, 30),
+    date: DateTime(2026, 5, 5, 19, 30),
     location: 'Y S Nagar Shivalayam, Dhone',
     mapQuery: 'Y S Nagar Shivalayam, Dhone, Andhra Pradesh',
     description:
