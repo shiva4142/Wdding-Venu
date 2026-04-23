@@ -17,12 +17,12 @@ import '../../../widgets/gold_divider.dart';
 //  - [inviterMessage]  → the sweet invitation line.
 // ============================================================
 
-const String inviterName = 'Dolly';
-const String inviterRelation = 'Sister of the Bride';
-const String inviterImage = 'assets/images/gallery/Sis2.jpg';
+const String inviterName = 'Pradya';
+const String inviterRelation = 'Niece of the Groom';
+const String inviterImage = 'assets/images/gallery/Pradya.jpeg';
 const String inviterMessage =
     'With lots of love and joy, I warmly invite you to celebrate '
-    "my sister Vidya and Venu Gopal’s wedding. "
+    "my chinnanna Shiva and Pooja pinni's wedding. "
     'Your blessings will make our family complete!';
 
 class InviterSection extends StatelessWidget {

@@ -26,9 +26,9 @@ Future<Response> onRequest(RequestContext context) async {
   final siteUrl =
       body['siteUrl'] as String? ?? Platform.environment['SITE_URL'] ?? '';
   final coupleBride =
-      Platform.environment['COUPLE_BRIDE'] ?? 'Vidya';
+      Platform.environment['COUPLE_BRIDE'] ?? 'Pooja';
   final coupleGroom =
-      Platform.environment['COUPLE_GROOM'] ?? 'Venu gopal';
+      Platform.environment['COUPLE_GROOM'] ?? 'Shiva';
 
   final inviteUrl = '$siteUrl/invite?guest=${Uri.encodeQueryComponent(slug)}';
   final text =

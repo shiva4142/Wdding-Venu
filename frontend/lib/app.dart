@@ -13,7 +13,7 @@ class WeddingApp extends ConsumerWidget {
     final mode = ref.watch(themeControllerProvider);
     final router = ref.watch(routerProvider);
     return MaterialApp.router(
-      title: 'Vidya & Venu gopal · Wedding',
+      title: 'Venu Gopal & Vidya · Wedding',
       debugShowCheckedModeBanner: false,
       themeMode: mode,
       theme: AppTheme.light(),
